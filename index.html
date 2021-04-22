@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Box Shadow Generator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="lucas">
+    <meta name="description" content="Gerador de box shadow CSS">
+    <meta name=keywords content="projeto,pratico,iniciante,box,shadow,html,css,js">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="center-content">
+            <h1>Box Shadow CSS Generator</h1>
+        </div><!--## CENTR CONTENT ##-->
+    </header>
+
+    <main>
+        <div class="center-content">
+            <section class="boxshadow-container">
+                <aside class="shadow-controller">
+                    <h2>Box Shadow Options</h2>
+
+                    <div class="shadow-option">
+                        <label for="Hshadow">
+                            <div class="label-tittle">
+                                Sombra horizontal
+                            </div><!--## LABEL TITTLE ##-->
+
+                            <div class="input-value">
+                                10px
+                            </div><!--## INPUT VALUE ##-->
+                        </label>
+                        <input type="range" class="input-css" id="Hshadow" min="-200" max="200" value="10">
+                    </div><!--## SHADOW OPTION ##-->
+
+                    <div class="shadow-option">
+                        <label for="Vshadow">
+                            <div class="label-tittle">
+                                Sombra vertical
+                            </div><!--## LABEL TITTLE ##-->
+
+                            <div class="input-value">
+                                10px
+                            </div><!--## INPUT VALUE ##-->
+                        </label>
+                        <input type="range" class="input-css" id="Vshadow" min="-200" max="200" value="10">
+                    </div><!--## SHADOW OPTION ##-->
+
+                    <div class="shadow-option">
+                        <label for="blur-radius">
+                            <div class="label-tittle">
+                                Raio do blur
+                            </div><!--## LABEL TITTLE ##-->
+
+                            <div class="input-value">
+                                5px
+                            </div><!--## INPUT VALUE ##-->
+                        </label>
+                        <input type="range" class="input-css" id="blur-radius" min="0" max="200" value="5">
+                    </div><!--## SHADOW OPTION ##-->
+
+                    <div class="shadow-option">
+                        <label for="spread-radius">
+                            <div class="label-tittle">
+                                Raio de espalhar
+                            </div><!--## LABEL TITTLE ##-->
+
+                            <div class="input-value">
+                                0px
+                            </div><!--## INPUT VALUE ##-->
+                        </label>
+                        <input type="range" class="input-css" id="spread-radius" min="0" max="200" value="5">
+                    </div><!--## SHADOW OPTION ##-->
+
+                    <div class="shadow-option">
+                        <label for="color-picker">
+                            <div class="label-tittle">
+                                Cor da sombra
+                            </div><!--## LABEL TITTLE ##-->
+
+                            <div class="input-value">
+                                #000000
+                            </div><!--## INPUT VALUE ##-->
+                        </label>
+                        <input type="color" id="color-picker">
+                    </div><!--## SHADOW OPTION ##-->
+
+                    <div class="shadow-option">
+                        <label for="inset-checkbox">
+                            <div class="label-tittle">
+                                Inset Shadow
+                            </div><!--## LABEL TITTLE ##-->
+
+                            <div class="input-value">
+                                <input type="checkbox" id="inset-checkbox">
+                            </div><!--## INPUT VALUE ##-->
+                        </label>
+                        
+                    </div><!--## SHADOW OPTION ##-->
+
+                </aside><!--## SHADOW CONTROLLER ##-->
+
+                <div class="box-result-content">
+
+                    <div class="box-container">
+                        <div class="box-content"></div>
+                    </div><!--## BOX CONTAINER ##-->
+
+                    <div class="css-shadow-property" id="cssClip">
+                        <p>-webkit-box-shadow: 10px 10px 5px 0px #000000;</p>
+                        <p>-moz-box-shadow: 10px 10px 5px 0px #000000;</p>
+                        <p>box-shadow: 10px 10px 5px 0px #000000;</p>
+
+                        <button class="btn" data-clipboard-target="#cssClip">
+                            <i class="fas fa-clipboard"></i>
+                        </button>
+                    </div><!--## CSS SHADOW PROPERTY ##-->
+                </div><!--## BOX RESULT CONTENT ##-->
+            </section><!--## BOX SHADOW CONTAINER-->
+        </div><!--## CENTER CONTENT ##-->
+    </main>
+
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
